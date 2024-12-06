@@ -1,5 +1,5 @@
 // src/handlers/index.ts
-import { Bot } from "https://deno.land/x/grammy@v1.33.0/mod.ts";
+import { Bot } from "grammy";
 import { handleStart } from "./startHandler.ts";
 import { handleMessage } from "./messageHandler.ts";
 

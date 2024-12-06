@@ -1,4 +1,4 @@
-import { Bot } from "https://deno.land/x/grammy@v1.33.0/mod.ts";
+import { Bot } from "grammy";
 import { config } from "./config/index.ts";
 import { registerHandlers } from "./handlers/index.ts";
 
@@ -15,11 +15,8 @@ async function startBot() {
         await bot.start();
     } catch (error) {
         console.error("Error starting bot:", error);
-        Deno.exit(1);
+        process.exit(1);
     }
 }
 
-// Start the bot when this file is run directly
-if (import.meta.main) {
-    startBot();
-}
+startBot();

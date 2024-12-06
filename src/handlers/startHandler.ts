@@ -1,5 +1,5 @@
 // src/handlers/startHandler.ts
-import { Context } from "https://deno.land/x/grammy@v1.33.0/mod.ts";
+import { Context } from "grammy";
 import { getUserBalance } from "../services/wallet.ts";
 
 

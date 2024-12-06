@@ -1,8 +1,0 @@
-{
-  "tasks": {
-    "dev": "deno run --watch --allow-net --allow-read --allow-env src/bot.ts"
-  },
-  "imports": {
-    "grammy": "https://deno.land/x/grammy@v1.33.0/mod.ts"
-  }
-}

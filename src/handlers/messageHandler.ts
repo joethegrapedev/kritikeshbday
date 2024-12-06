@@ -1,5 +1,5 @@
 // src/handlers/messageHandler.ts
-import { Context } from "https://deno.land/x/grammy@v1.33.0/mod.ts";
+import { Context } from "grammy";
 
 export async function handleMessage(ctx: Context) {
     // Check if the message contains text
