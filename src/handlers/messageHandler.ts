@@ -1,4 +1,3 @@
-// src/handlers/messageHandler.ts
 import { Context } from "grammy";
 
 export async function handleMessage(ctx: Context) {
