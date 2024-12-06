@@ -1,18 +1,19 @@
-import { Keyboard } from "grammy";
+import { InlineKeyboard } from "grammy";
 
-export const keyboard = () => {
-  return new Keyboard()
-    .text("Buy").text("Sell & Manage")
+export const inlineKeyboard = () => {
+  return new InlineKeyboard()
+    .text("Buy", "buy")
+    .text("Sell & Manage", "sell_manage")
     .row()
-    .text("Help").text("Refer Friends").text("Alerts")
+    .text("Help", "help")
+    .text("Refer Friends", "refer_friends")
+    .text("Alerts", "alerts")
     .row()
-    .text("Wallet").text("Settings").text("Limit Orders")
+    .text("Wallet", "wallet")
+    .text("Settings", "settings")
+    .text("Limit Orders", "limit_orders")
     .row()
-    .text("Pin").text("Refresh")
-    .resized()
-    .persistent();
+    .text("Pin", "pin")
+    .text("Refresh", "refresh");
 };
-function persistent() {
-    throw new Error("Function not implemented.");
-}
 
