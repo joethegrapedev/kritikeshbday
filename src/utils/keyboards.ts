@@ -1,6 +1,6 @@
 import { InlineKeyboard } from "grammy";
 
-export const inlineKeyboard = () => {
+export const startKeyboard = () => {
   return new InlineKeyboard()
     .text("Buy", "buy")
     .text("Sell & Manage", "sell_manage")

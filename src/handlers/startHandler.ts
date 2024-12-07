@@ -1,6 +1,6 @@
 import { Context } from "grammy";
 import { getUserBalance } from "../services/wallet.ts";
-import { inlineKeyboard } from "../utils/keyboard.ts";
+import { startKeyboard } from "../utils/keyboards.ts";
 
 export async function handleStart(ctx: Context) {
   const balance = await getUserBalance(); // This will eventually come from getUser
@@ -20,7 +20,7 @@ Getting Started:
 💡 Pro Tip: Advanced traders can enable Auto Buy in settings to instantly purchase tokens`,
     {
       reply_markup: {
-        inline_keyboard: inlineKeyboard().inline_keyboard,
+        inline_keyboard: startKeyboard().inline_keyboard,
       }
     }
   );
