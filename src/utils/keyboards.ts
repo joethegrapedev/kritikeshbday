@@ -1,5 +1,15 @@
-import { InlineKeyboard } from "grammy";
+import { Keyboard, InlineKeyboard } from "grammy";
 
+// Regular keyboard
+export const mainKeyboard = new Keyboard()
+    .text("/home")
+    .text("/settings")
+    .row()
+    .text("/bots")
+    .text("/help")
+    .resized();
+
+// Your inline keyboard - keeping it exactly as provided
 export const startKeyboard = () => {
   return new InlineKeyboard()
     .text("Buy", "buy")
@@ -16,4 +26,3 @@ export const startKeyboard = () => {
     .text("Pin", "pin")
     .text("Refresh", "refresh");
 };
-
