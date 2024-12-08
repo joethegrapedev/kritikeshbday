@@ -1,8 +1,19 @@
 import { Bot } from "grammy";
-import { startHandler } from "./startHandler.js";
-import { messageHandler } from "./messageHandler.js";
+import { handleStart } from "./startHandler.ts";
+import { handleMessage } from "./messageHandler.ts";
+import { handleSettings } from "./settingsHandler.ts";
 
 export function registerHandlers(bot: Bot) {
+    bot.command("start", handleStart);
+
+    bot.command("home", handleStart);
+
+    bot.command("settings", handleSettings);
+
+    bot.on("message", handleMessage);
+
+    
+}
     // Set bot commands with descriptions
     bot.api.setMyCommands([
         { command: "home", description: "view trades and open main menu" },
@@ -10,27 +21,3 @@ export function registerHandlers(bot: Bot) {
         { command: "bots", description: "fast backup bots. same wallet & positions" },
         { command: "help", description: "get help and support" }
     ]);
-
-    // Register command handlers
-    bot.command("start", startHandler);
-    bot.command("home", async (ctx) => {
-        await ctx.reply("🏠 Main Menu - View your trades and access main features");
-    });
-    bot.command("settings", async (ctx) => {
-        await ctx.reply("⚙️ Settings - Customize your bot preferences");
-    });
-    bot.command("bots", async (ctx) => {
-        await ctx.reply("🤖 Backup Bots - Access alternative bot instances\n\nAll bots share the same wallet and positions.");
-    });
-    bot.command("help", async (ctx) => {
-        await ctx.reply("❓ Help Center - Get support and answers to common questions");
-    });
-
-    // Register message handler
-    bot.on("message", messageHandler);
-
-    // Error handling
-    bot.catch((err) => {
-        console.error("Error in bot:", err);
-    });
-}
