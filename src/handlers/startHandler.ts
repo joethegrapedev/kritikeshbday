@@ -35,8 +35,3 @@ Available commands:
     await ctx.reply('Sorry, there was an error loading your balance. Please try again.');
   }
 }
-
-// Keep original handleStart function
-export function handleStart(): void {
-  // Implementation goes here
-}

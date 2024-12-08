@@ -2,6 +2,7 @@ import { Bot } from "grammy";
 import { startHandler } from "./startHandler";
 import { messageHandler } from "./messageHandler";
 import { settingsHandler } from "./settingsHandler";
+import { Help } from "./helpHandler";
 
 // Commands interface for better type safety
 interface BotCommand {
@@ -10,8 +11,8 @@ interface BotCommand {
 }
 
 const BOT_COMMANDS: BotCommand[] = [
-    { command: "home", description: "view trades and open main menu" },
-    { command: "settings", description: "customize your bot" },
+    { command: "home", description: "view open positions from the main menu" },
+    { command: "settings", description: "customize your bot settings" },
     { command: "bots", description: "fast backup bots. same wallet & positions" },
     { command: "help", description: "get help and support" }
 ];
@@ -22,14 +23,9 @@ export function registerHandlers(bot: Bot) {
 
     // Register command handlers **change settings n bots to relevant handler later
     bot.command("start", startHandler);
-    bot.command("home", startHandler); // Using startHandler for home command
+    bot.command("home", startHandler); 
     bot.command("settings", settingsHandler);
-    bot.command("bots", async (ctx) => {
-        await ctx.reply("🤖 Backup Bots - Access alternative bot instances\n\nAll bots share the same wallet and positions.");
-    });
-    bot.command("help", async (ctx) => {
-        await ctx.reply("❓ Help Center - Get support and answers to common questions");
-    });
+    bot.command("help", Help)
 
     // Register message handler
     bot.on("message", messageHandler);

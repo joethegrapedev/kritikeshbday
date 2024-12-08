@@ -2,7 +2,6 @@ import { Bot } from "grammy";
 import { config } from "./config/index.ts";
 import { registerHandlers } from "./handlers/index.ts";
 
-// Main bot initialization and startup function
 async function startBot() {
     try {
         const bot = new Bot(config.TELEGRAM_TOKEN);
@@ -10,7 +9,6 @@ async function startBot() {
         // Register all command and message handlers
         registerHandlers(bot);
 
-        // Start the bot
         console.log("Starting bot...");
         await bot.start();
     } catch (error) {

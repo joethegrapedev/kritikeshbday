@@ -9,7 +9,7 @@ export const mainKeyboard = new Keyboard()
     .text("/help")
     .resized();
 
-// Your inline keyboard - keeping it exactly as provided
+// Your inline keyboard
 export const startKeyboard = () => {
   return new InlineKeyboard()
     .text("Buy", "buy")
