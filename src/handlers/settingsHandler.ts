@@ -1,7 +1,7 @@
 import { Context } from "grammy";
 import { settingsKeyboard } from "../utils/keyboards";
 
-export async function handleSettings(ctx: Context) {
+export async function settingsHandler(ctx: Context) {
 
 
     return ctx.reply(
