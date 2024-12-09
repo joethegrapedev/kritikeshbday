@@ -9,7 +9,7 @@ export const mainKeyboard = new Keyboard()
     .text("/help")
     .resized();
 
-// Your inline keyboard - keeping it exactly as provided
+// Your inline keyboard
 export const startKeyboard = () => {
   return new InlineKeyboard()
     .text("Buy", "buy")
@@ -65,4 +65,18 @@ export const settingsKeyboard = () => {
       // Restore Defaults and Close
       .text("Restore Defaults", "restore_defaults")
       .text("Close menu", "close_settings");
+};
+
+export const buyKeyboard = (address: string) => {
+    return new InlineKeyboard()
+        .text("🔒 DCA", `dca_${address}`)
+        .text("Swap", `swap_${address}`)
+        .text("✅ Limit", `limit_${address}`)
+        .row()
+        .text("Limit Buy 5.0 SOL", `limitbuy_5_${address}`)
+        .text("Limit Buy X SOL", `limitbuy_custom_${address}`)
+        .row()
+        .text("Refresh", `refresh_${address}`)
+        .row()
+        .text("Close", `close_buyMenu`);
 };
