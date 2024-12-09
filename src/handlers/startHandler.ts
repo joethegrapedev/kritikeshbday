@@ -6,9 +6,9 @@ import { startKeyboard } from "../utils/keyboards.ts";
 export async function startHandler(ctx: Context) {
   try {
     const balance = await getUserBalance(); // Get user's balance
-    const menuText = `🎉 Welcome to Coinlol's XRP telegram trading bot!
+    const menuText = `🎉 Welcome to Coinlol's Solana telegram trading bot!
 
-💰 Current Balance: ${balance} XRP
+💰 Current Balance: ${balance} SOL
 📊 Open Positions: None
 
 Getting Started:
@@ -17,13 +17,7 @@ Getting Started:
 3️⃣ Configure your settings via /settings
 4️⃣ Manage your positions from the /home dashboard
 
-💡 Pro Tip: Advanced traders can enable Auto Buy in settings to instantly purchase tokens
-
-Available commands:
-/home - view trades and open main menu
-/settings - customize your bot
-/bots - fast backup bots. same wallet & positions
-/help - get help and support`;
+💡 Pro Tip: Advanced traders can enable Auto Buy in settings to instantly purchase tokens`;
 
     await ctx.reply(menuText, {
       reply_markup: {

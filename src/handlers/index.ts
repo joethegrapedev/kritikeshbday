@@ -3,6 +3,7 @@ import { startHandler } from "./startHandler";
 import { messageHandler } from "./messageHandler";
 import { settingsHandler } from "./settingsHandler";
 import { Help } from "./helpHandler";
+import { buyHandler } from "./buyHandler";
 
 // Commands interface for better type safety
 interface BotCommand {
@@ -18,16 +19,15 @@ const BOT_COMMANDS: BotCommand[] = [
 ];
 
 export function registerHandlers(bot: Bot) {
-    // Set bot commands with descriptions
+    // menu button at bottom left.
     bot.api.setMyCommands(BOT_COMMANDS);
 
-    // Register command handlers **change settings n bots to relevant handler later
     bot.command("start", startHandler);
     bot.command("home", startHandler); 
     bot.command("settings", settingsHandler);
     bot.command("help", Help)
+    bot.command("buy", buyHandler)
 
-    // Register message handler
     bot.on("message", messageHandler);
 
     // Error handling
