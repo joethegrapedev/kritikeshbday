@@ -8,15 +8,15 @@ import Image from "next/image";
 const images = [
   {
     url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-    message: "Beautiful sunset over the mountains",
+    message: "1 Nigga, 2 Chinese 1 Vietcong warrior",
   },
   {
     url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff",
-    message: "Morning mist in the valley",
+    message: "asgdfga",
   },
   {
     url: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d",
-    message: "Peaceful forest walk",
+    message: "double date",
   },
   {
     url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
