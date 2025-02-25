@@ -39,3 +39,23 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Ignore system and personal files
+.localized
+Final.Cut.Pro.v11.0.dmg
+School_stuff_2024/
+github-recovery-codes.txt
+gopro/
+laos trip/
+upload to gdrive, cleft lip/
+
+# Ignore Next.js build files
+.next/
+
+# Ignore unrelated directories
+consolidate-repo/
+gambol/
+laos projects/
+old projects/
+
