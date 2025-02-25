@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "next": "15.1.7",
-    "framer-motion": "^11.13.1",
     "expo": "^52.0.35",
-    "expo-asset": "~11.0.3"
+    "expo-asset": "~11.0.3",
+    "framer-motion": "^11.13.1",
+    "next": "15.1.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
   }
 }
